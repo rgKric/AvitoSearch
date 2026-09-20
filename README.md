@@ -122,3 +122,10 @@ pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https
 ```bash
 pip install -r requirements.txt
 ```
+
+данные необходимо разархивировать в корень проекта (папка **dataset** в корне и внутри датасеты). Тоесть в корне проекта папка **dataset**, а в этой папке все данные, которые были предоставлены. Или же скачать архив в корень и :
+
+```bash
+mkdir -p dataset
+unzip dataset.zip -d dataset
+```
