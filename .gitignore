@@ -21,3 +21,7 @@ data/
 dataset/
 cache/
 .chroma/
+
+models/
+preprocessed/
+ans/
