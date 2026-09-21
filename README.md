@@ -129,3 +129,14 @@ pip install -r requirements.txt
 mkdir -p dataset
 unzip dataset.zip -d dataset
 ```
+
+**ПРИМЕЧАНИЕ**: я сделал коммит в `preprocess.ipynb` после дедлайна. заменил:
+
+```python
+items_df_hf['item_title_raw_norm'] = items_df_hf['item_title_raw'].apply(preprocess_hf, prefix='query: ') --> items_df_hf['item_title_raw_norm'] = items_df_hf['item_title_raw'].apply(preprocess_hf, prefix='passage: ')
+```
+и
+```python
+items_df_test['item_title_raw_norm'] = items_df_test['item_title_raw'].apply(preprocess_hf, prefix='query: ') --> items_df_test['item_title_raw_norm'] = items_df_test['item_title_raw'].apply(preprocess_hf, prefix='passage: ')
+```
+Изначально как раз со вторыми вариантами работал, при одном из экспериментов забыл вернуть обратно, надеюсь мне простят это. Иначе качество будет чуть хуже заявленного при отправке. Прошу за это прощение, не блокируйте меня...
